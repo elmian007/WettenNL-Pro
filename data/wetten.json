@@ -1,0 +1,31 @@
+{
+  "wetten": [
+    {
+      "code": "SR",
+      "naam": "Wetboek van Strafrecht",
+      "artikelen": [
+        {
+          "nummer": "300",
+          "titel": "Mishandeling",
+          "tekst": "Hij die opzettelijk iemand mishandelt, wordt gestraft..."
+        },
+        {
+          "nummer": "310",
+          "titel": "Diefstal",
+          "tekst": "Hij die enig goed dat geheel of ten dele aan een ander toebehoort wegneemt..."
+        }
+      ]
+    },
+    {
+      "code": "WVW",
+      "naam": "Wegenverkeerswet 1994",
+      "artikelen": [
+        {
+          "nummer": "8",
+          "titel": "Rijden onder invloed",
+          "tekst": "Het is verboden een voertuig te besturen na gebruik van alcohol..."
+        }
+      ]
+    }
+  ]
+}
