@@ -166,3 +166,15 @@ function zoekArtikelen(zoekterm){
     });
 
 }
+function voegFavorietToe(artikel){
+
+let transactie=db.transaction(
+["favorieten"],
+"readwrite"
+);
+
+let store=transactie.objectStore("favorieten");
+
+store.put(artikel);
+
+}
