@@ -3,24 +3,37 @@
     {
       "code": "SR",
       "naam": "Wetboek van Strafrecht",
-      "onderdelen": [
-        {
-          "hoofdstuk": "Titel I",
-          "naam": "Algemene bepalingen",
-          "artikelen": [
-            {
-              "nummer": "1",
-              "titel": "Legaliteitsbeginsel",
-              "tekst": "Geen feit is strafbaar dan uit kracht van een daaraan voorafgegane wettelijke strafbepaling."
-            },
-            {
-              "nummer": "300",
-              "titel": "Mishandeling",
-              "tekst": "Hij die opzettelijk iemand mishandelt wordt gestraft..."
-            }
-          ]
-        }
-      ]
+      "artikelen": []
+    },
+    {
+      "code": "SV",
+      "naam": "Wetboek van Strafvordering",
+      "artikelen": []
+    },
+    {
+      "code": "WVW",
+      "naam": "Wegenverkeerswet 1994",
+      "artikelen": []
+    },
+    {
+      "code": "RVV",
+      "naam": "Reglement verkeersregels en verkeerstekens 1990",
+      "artikelen": []
+    },
+    {
+      "code": "WWM",
+      "naam": "Wet wapens en munitie",
+      "artikelen": []
+    },
+    {
+      "code": "OPIUM",
+      "naam": "Opiumwet",
+      "artikelen": []
+    },
+    {
+      "code": "AWB",
+      "naam": "Algemene wet bestuursrecht",
+      "artikelen": []
     }
   ]
 }
