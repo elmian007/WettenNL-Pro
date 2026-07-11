@@ -192,3 +192,88 @@ slaNotitieOp(id,tekst);
 alert("Notitie opgeslagen");
 
 }
+
+function toonHome(){
+
+document.getElementById("resultaat").innerHTML=`
+
+<h2>⚖️ WettenNL Pro</h2>
+
+<p>
+Kies een wetboek of zoek een artikel.
+</p>
+
+`;
+
+}
+
+
+
+function toonZoeken(){
+
+document.getElementById("resultaat").innerHTML=`
+
+<h2>🔍 Zoeken</h2>
+
+<p>
+Gebruik de zoekbalk bovenaan.
+</p>
+
+`;
+
+}
+
+
+
+function toonFavorieten(){
+
+let transactie=db.transaction(
+["favorieten"],
+"readonly"
+);
+
+let store=transactie.objectStore("favorieten");
+
+let verzoek=store.getAll();
+
+
+verzoek.onsuccess=function(){
+
+let html="<h2>⭐ Favorieten</h2>";
+
+verzoek.result.forEach(a=>{
+
+html+=`
+
+<h3>
+${a.wet} artikel ${a.nummer}
+</h3>
+
+<p>${a.titel}</p>
+
+`;
+
+});
+
+
+document.getElementById("resultaat").innerHTML=html;
+
+};
+
+}
+
+
+
+function toonNotities(){
+
+document.getElementById("resultaat").innerHTML=`
+
+<h2>📝 Notities</h2>
+
+<p>
+Hier komen opgeslagen notities.
+</p>
+
+`;
+
+}
