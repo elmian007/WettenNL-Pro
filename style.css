@@ -48,3 +48,33 @@ button:hover{
 #resultaat{
     margin-top:25px;
 }
+
+.menu{
+
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+
+display:flex;
+
+background:white;
+
+border-top:1px solid #ddd;
+
+}
+
+.menu button{
+
+margin:0;
+padding:12px 5px;
+
+font-size:13px;
+
+box-shadow:none;
+
+border-radius:0;
+
+text-align:center;
+
+}
