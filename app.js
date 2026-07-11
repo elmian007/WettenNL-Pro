@@ -352,3 +352,57 @@ window.addEventListener(
     controleerAppUpdates();
 
 });
+
+function toonInstellingen(){
+
+document.getElementById("resultaat").innerHTML = `
+
+<h2>⚙️ Instellingen</h2>
+
+
+<h3>WettenNL Pro</h3>
+
+<p>
+Gratis juridische naslagapp.
+</p>
+
+
+<button onclick="controleerUpdates()">
+🔄 Controleer op updates
+</button>
+
+
+<button onclick="laadWetData()">
+📥 Wetgeving opnieuw laden
+</button>
+
+
+<h3>Status</h3>
+
+<p id="status">
+Controleren...
+</p>
+
+`;
+
+toonStatus();
+
+}
+
+
+
+function toonStatus(){
+
+let status=document.getElementById("status");
+
+if(navigator.onLine){
+
+status.innerHTML="🟢 Online";
+
+}else{
+
+status.innerHTML="🔴 Offline";
+
+}
+
+}
