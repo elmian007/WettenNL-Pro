@@ -42,7 +42,11 @@ artikel.tekst
 };
 
 
-artikelOpslaan(record);
+if(record.nummer){
+
+    artikelOpslaan(record);
+
+}
 
 
 }
