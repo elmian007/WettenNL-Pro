@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WettenNL Pro</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+<header>
+<h1>⚖️ WettenNL Pro</h1>
+
+<input id="zoekveld" type="search" placeholder="Zoek artikel of trefwoord...">
+
+</header>
+
+
+<main>
+
+<h2>Wetboeken</h2>
+
+<div id="wetten">
+
+<button onclick="openWet('Sr')">
+Wetboek van Strafrecht
+</button>
+
+<button onclick="openWet('Sv')">
+Wetboek van Strafvordering
+</button>
+
+<button onclick="openWet('WVW')">
+Wegenverkeerswet 1994
+</button>
+
+<button onclick="openWet('RVV')">
+RVV 1990
+</button>
+
+<button onclick="openWet('WWM')">
+Wet wapens en munitie
+</button>
+
+<button onclick="openWet('Opium')">
+Opiumwet
+</button>
+
+<button onclick="openWet('Awb')">
+Algemene wet bestuursrecht
+</button>
+
+</div>
+
+
+<section id="resultaat"></section>
+
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
