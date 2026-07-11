@@ -182,3 +182,13 @@ placeholder="Eigen notitie...">
 `;
 
 }
+
+function bewaarNotitie(id){
+
+let tekst=document.getElementById("notitie").value;
+
+slaNotitieOp(id,tekst);
+
+alert("Notitie opgeslagen");
+
+}
