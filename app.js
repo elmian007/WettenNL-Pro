@@ -58,3 +58,13 @@ html+=`
 resultaat.innerHTML=html;
 
 }
+if ("serviceWorker" in navigator){
+
+navigator.serviceWorker.register("service-worker.js")
+.then(()=>{
+
+console.log("WettenNL Pro offline actief");
+
+});
+
+}
