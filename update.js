@@ -1,22 +1,47 @@
-async function controleerAppUpdates(){
+async function controleerUpdates(){
 
-    const antwoord = await fetch(
-        "updates.json"
-    );
+if(!navigator.onLine){
 
+alert(
+"Geen internetverbinding"
+);
 
-    const updates = await antwoord.json();
+return;
 
-
-    for(let artikel of updates){
-
-        artikelOpslaan(artikel);
-
-    }
+}
 
 
-    console.log(
-        "Updates verwerkt"
-    );
+try{
+
+
+const antwoord = await fetch(
+"updates.json"
+);
+
+
+const updates = await antwoord.json();
+
+
+for(let artikel of updates){
+
+artikelOpslaan(artikel);
+
+}
+
+
+alert(
+"Updates verwerkt"
+);
+
+
+}catch(e){
+
+
+alert(
+"Geen nieuwe updates gevonden"
+);
+
+
+}
 
 }
