@@ -140,3 +140,45 @@ document.getElementById("resultaat").innerHTML = html;
 
 
 });
+
+function toonArtikel(artikel){
+
+let resultaat=document.getElementById("resultaat");
+
+
+resultaat.innerHTML=`
+
+<h2>
+${artikel.wet}
+</h2>
+
+<h3>
+Artikel ${artikel.nummer}
+</h3>
+
+<h4>
+${artikel.titel}
+</h4>
+
+<p>
+${artikel.tekst}
+</p>
+
+
+<button onclick='voegFavorietToe(${JSON.stringify(artikel)})'>
+⭐ Favoriet
+</button>
+
+
+<textarea id="notitie"
+placeholder="Eigen notitie...">
+</textarea>
+
+
+<button onclick="bewaarNotitie('${artikel.id}')">
+📝 Notitie opslaan
+</button>
+
+`;
+
+}
