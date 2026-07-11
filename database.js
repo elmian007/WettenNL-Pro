@@ -27,6 +27,44 @@ keyPath:"id"
 
 }
 
+
+if(!db.objectStoreNames.contains("favorieten")){
+
+db.createObjectStore(
+"favorieten",
+{
+keyPath:"id"
+}
+);
+
+}
+
+
+if(!db.objectStoreNames.contains("notities")){
+
+db.createObjectStore(
+"notities",
+{
+keyPath:"id"
+}
+);
+
+}
+
+};
+
+
+if(!db.objectStoreNames.contains("artikelen")){
+
+db.createObjectStore(
+"artikelen",
+{
+keyPath:"id"
+}
+);
+
+}
+
 };
 
 
