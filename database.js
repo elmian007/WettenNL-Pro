@@ -178,3 +178,21 @@ let store=transactie.objectStore("favorieten");
 store.put(artikel);
 
 }
+function slaNotitieOp(id,tekst){
+
+let transactie=db.transaction(
+["notities"],
+"readwrite"
+);
+
+let store=transactie.objectStore("notities");
+
+
+store.put({
+
+id:id,
+tekst:tekst
+
+});
+
+}
