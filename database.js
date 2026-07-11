@@ -90,3 +90,41 @@ resolve(request.result);
 });
 
 }
+
+function zoekArtikelen(zoekterm){
+
+    return new Promise((resolve)=>{
+
+        let transactie = db.transaction(
+            ["artikelen"],
+            "readonly"
+        );
+
+        let store = transactie.objectStore("artikelen");
+
+        let verzoek = store.getAll();
+
+        verzoek.onsuccess = function(){
+
+            let artikelen = verzoek.result;
+
+            zoekterm = zoekterm.toLowerCase();
+
+            let resultaten = artikelen.filter((artikel)=>{
+
+                return (
+                    artikel.nummer.toLowerCase().includes(zoekterm) ||
+                    artikel.titel.toLowerCase().includes(zoekterm) ||
+                    artikel.tekst.toLowerCase().includes(zoekterm) ||
+                    artikel.wet.toLowerCase().includes(zoekterm)
+                );
+
+            });
+
+            resolve(resultaten);
+
+        };
+
+    });
+
+}
