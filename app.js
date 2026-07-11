@@ -277,3 +277,70 @@ Hier komen opgeslagen notities.
 `;
 
 }
+function toonWetboek(code){
+
+    let transactie = db.transaction(
+        ["artikelen"],
+        "readonly"
+    );
+
+    let store = transactie.objectStore("artikelen");
+
+    let verzoek = store.getAll();
+
+
+    verzoek.onsuccess = function(){
+
+        let artikelen = verzoek.result.filter(
+            artikel => artikel.code === code
+        );
+
+
+        let html = `
+        <button onclick="toonHome()">
+        ← Terug
+        </button>
+
+        <h2>${artikelen[0]?.wet || "Wetboek"}</h2>
+
+        <input 
+        id="wetZoek"
+        placeholder="Zoek binnen deze wet..."
+        >
+
+        <hr>
+        `;
+
+
+        artikelen.forEach(artikel=>{
+
+            html += `
+
+            <div onclick='toonArtikel(${JSON.stringify(artikel)})'>
+
+            <h3>
+            Artikel ${artikel.nummer}
+            </h3>
+
+            <strong>
+            ${artikel.titel}
+            </strong>
+
+            <p>
+            ${artikel.tekst.substring(0,120)}...
+            </p>
+
+            </div>
+
+            <hr>
+
+            `;
+
+        });
+
+
+        document.getElementById("resultaat").innerHTML = html;
+
+    };
+
+}
