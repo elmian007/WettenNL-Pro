@@ -83,3 +83,60 @@ console.log("Database gestart");
 laadWetData();
 
 });
+
+const zoekveld = document.getElementById("zoekveld");
+
+
+zoekveld.addEventListener(
+"input",
+function(){
+
+let zoekterm = zoekveld.value;
+
+
+if(zoekterm.length < 2){
+
+return;
+
+}
+
+
+zoekArtikelen(zoekterm)
+.then(resultaten=>{
+
+
+let html = "";
+
+
+resultaten.forEach(artikel=>{
+
+
+html += `
+
+<h3>
+${artikel.wet}
+- Artikel ${artikel.nummer}
+</h3>
+
+<strong>
+${artikel.titel}
+</strong>
+
+<p>
+${artikel.tekst}
+</p>
+
+<hr>
+
+`;
+
+});
+
+
+document.getElementById("resultaat").innerHTML = html;
+
+
+});
+
+
+});
