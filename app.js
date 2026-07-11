@@ -344,3 +344,11 @@ function toonWetboek(code){
     };
 
 }
+
+window.addEventListener(
+"online",
+()=>{
+
+    controleerAppUpdates();
+
+});
