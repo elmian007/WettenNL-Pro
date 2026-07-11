@@ -74,3 +74,12 @@ openDatabase()
 console.log("Lokale database actief");
 
 });
+
+openDatabase()
+.then(()=>{
+
+console.log("Database gestart");
+
+laadWetData();
+
+});
