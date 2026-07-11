@@ -68,3 +68,9 @@ console.log("WettenNL Pro offline actief");
 });
 
 }
+openDatabase()
+.then(()=>{
+
+console.log("Lokale database actief");
+
+});
